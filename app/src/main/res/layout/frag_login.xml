@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/common_bg_content" >
+                android:background="@color/common_bg_content">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/common_bg_content"
-        android:fillViewport="true" >
+        android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_login_top_1"
-                android:contentDescription="@string/app_name" />
+                android:contentDescription="@string/app_name"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <LinearLayout
                     android:id="@+id/user_info_container"
@@ -32,94 +33,46 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:background="@color/white"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/list_divider"
                         android:contentDescription="@string/app_name"
-                        android:src="@color/common_divider" />
+                        android:src="@color/common_divider"/>
 
-                    <RelativeLayout
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@id/id_account"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/common_item_height"
-                        android:background="@color/white" >
+                        android:layout_height="wrap_content"
+                        android:hint="@string/account_hint"
+                        android:layout_marginTop="15dp"
+                        android:inputType="phone"
+                        android:textSize="@dimen/common_text_size_3"
+                        app:met_baseColor="@color/common_text_black_2"
+                        app:met_clearButton="true"
+                        app:met_floatingLabel="normal"
+                        app:met_iconLeft="@drawable/ic_phone"
+                        app:met_iconPadding="0dp"
+                        app:met_primaryColor="?colorAccent"
+                        app:met_singleLineEllipsis="true">
+                    </com.rengwuxian.materialedittext.MaterialEditText>
 
-                        <AutoCompleteTextView
-                            android:id="@id/id_account"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:drawableLeft="@drawable/ic_phone"
-                            android:drawablePadding="16dp"
-                            android:hint="@string/account_hint"
-                            android:inputType="number"
-                            android:paddingLeft="@dimen/common_margin"
-                            android:paddingRight="@dimen/common_margin"
-                            android:singleLine="true"
-                            android:textColorHint="@color/common_hint_color"
-                            android:textSize="@dimen/common_hint_text_size" >
-                        </AutoCompleteTextView>
-
-                        <ImageView
-                            android:id="@id/id_account_delete"
-                            android:layout_width="44dp"
-                            android:layout_height="44dp"
-                            android:layout_alignParentRight="true"
-                            android:layout_centerVertical="true"
-                            android:contentDescription="@string/app_name"
-                            android:scaleType="centerInside"
-                            android:src="@drawable/ic_cancel"
-                            android:visibility="gone" />
-                    </RelativeLayout>
-
-                    <ImageView
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@id/id_password"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/list_divider"
-                        android:layout_marginLeft="45dp"
-                        android:contentDescription="@string/app_name"
-                        android:src="@color/common_divider" />
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/common_item_height"
-                        android:background="@color/white" >
-
-                        <EditText
-                            android:id="@id/id_password"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:background="@null"
-                            android:drawableLeft="@drawable/ic_password"
-                            android:drawablePadding="16dp"
-                            android:ems="10"
-                            android:hint="@string/password_hint"
-                            android:inputType="textPassword"
-                            android:paddingLeft="@dimen/common_margin"
-                            android:paddingRight="@dimen/common_margin"
-                            android:singleLine="true"
-                            android:textColorHint="@color/common_hint_color"
-                            android:textSize="@dimen/common_hint_text_size" />
-
-                        <ImageView
-                            android:id="@id/id_password_delete"
-                            android:layout_width="44dp"
-                            android:layout_height="44dp"
-                            android:layout_alignParentRight="true"
-                            android:layout_centerVertical="true"
-                            android:contentDescription="@string/app_name"
-                            android:scaleType="centerInside"
-                            android:src="@drawable/ic_cancel"
-                            android:visibility="gone" />
-                    </RelativeLayout>
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/list_divider"
-                        android:contentDescription="@string/app_name"
-                        android:src="@color/common_divider" />
+                        android:layout_height="wrap_content"
+                        android:hint="@string/password_hint"
+                        android:inputType="textPassword"
+                        android:textSize="@dimen/common_text_size_3"
+                        app:met_baseColor="@color/common_text_black_2"
+                        app:met_clearButton="true"
+                        app:met_floatingLabel="normal"
+                        app:met_iconLeft="@drawable/ic_password"
+                        app:met_iconPadding="0dp"
+                        app:met_primaryColor="?colorAccent"
+                        app:met_singleLineEllipsis="true">
+                    </com.rengwuxian.materialedittext.MaterialEditText>
                 </LinearLayout>
 
                 <Button
@@ -133,7 +86,7 @@
                     android:background="@drawable/common_green_btn_bg"
                     android:text="@string/login"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/confirm_button_text_size" />
+                    android:textSize="@dimen/confirm_button_text_size"/>
 
                 <Button
                     android:id="@id/id_find_pwd"
@@ -145,7 +98,7 @@
                     android:padding="5dp"
                     android:text="@string/find_back_pwd"
                     android:textColor="@color/common_text_black_5"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"/>
 
                 <Button
                     android:id="@id/id_register"
@@ -157,7 +110,7 @@
                     android:padding="5dp"
                     android:text="@string/quick_register"
                     android:textColor="#ff9833"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"/>
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -166,7 +119,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="10dp"
                     android:contentDescription="@string/app_name"
-                    android:src="@drawable/ic_login_bottom" />
+                    android:src="@drawable/ic_login_bottom"/>
             </RelativeLayout>
         </LinearLayout>
     </ScrollView>

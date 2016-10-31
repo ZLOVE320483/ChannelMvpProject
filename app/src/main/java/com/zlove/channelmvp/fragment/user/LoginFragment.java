@@ -1,10 +1,13 @@
 package com.zlove.channelmvp.fragment.user;
 
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
-import android.widget.AutoCompleteTextView;
-import android.widget.EditText;
 
+import com.rengwuxian.materialedittext.MaterialEditText;
+import com.rengwuxian.materialedittext.validation.RegexpValidator;
 import com.zlove.channelmvp.R;
 import com.zlove.channelmvp.bean.user.UserLoginBean;
 import com.zlove.channelmvp.contract.UserLoginContract;
@@ -12,6 +15,7 @@ import com.zlove.channelmvp.fragment.base.BaseFragment;
 import com.zlove.channelmvp.model.user.UserLoginModel;
 import com.zlove.channelmvp.presenter.user.UserLoginPresenter;
 import com.zlove.channelmvp.util.MD5Util;
+import com.zlove.channelmvp.util.ToastUtil;
 
 import butterknife.Bind;
 import butterknife.OnClick;
@@ -22,9 +26,9 @@ import butterknife.OnClick;
 public class LoginFragment extends BaseFragment<UserLoginPresenter, UserLoginModel> implements UserLoginContract.View, View.OnClickListener {
 
     @Bind(R.id.id_account)
-    AutoCompleteTextView etAccount;
+    MaterialEditText etAccount;
     @Bind(R.id.id_password)
-    EditText etPassword;
+    MaterialEditText etPassword;
 
     private String account;
     private String password;
@@ -41,15 +45,60 @@ public class LoginFragment extends BaseFragment<UserLoginPresenter, UserLoginMod
 
     @Override
     protected void initView() {
+        setTranslateBar();
+
+        etAccount.addValidator(new RegexpValidator("请输入正确的手机号", "^((13[0-9])|(15[^4,\\D])|(18[0,5-9]))\\d{8}$"));
+        etPassword.addValidator(new RegexpValidator("请输入正确的密码", "^[a-zA-Z0-9]{6,14}$"));
+
+        etAccount.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (!TextUtils.isEmpty(s.toString())) {
+                    etAccount.validate();
+                }
+            }
+        });
+
+        etPassword.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (!TextUtils.isEmpty(s.toString())) {
+                    etPassword.validate();
+                }
+            }
+        });
 
     }
 
-    @OnClick(R.id.id_login)
+    @OnClick({R.id.id_login, R.id.id_register, R.id.id_find_pwd})
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.id_login:
                 doLogin();
+                break;
+
+            case R.id.id_register:
+                break;
+
+            case R.id.id_find_pwd:
                 break;
 
             default:
@@ -58,6 +107,12 @@ public class LoginFragment extends BaseFragment<UserLoginPresenter, UserLoginMod
     }
 
     private void doLogin() {
+        if (!etAccount.validate()) {
+            return;
+        }
+        if (!etPassword.validate()) {
+            return;
+        }
         account = etAccount.getText().toString().trim();
         password = etPassword.getText().toString().trim();
         mPresenter.login(account, MD5Util.getMD5Code(password));
@@ -65,7 +120,8 @@ public class LoginFragment extends BaseFragment<UserLoginPresenter, UserLoginMod
 
     @Override
     public void loginSuccess(UserLoginBean loginBean) {
-        Log.d("ZLOVE", "res---" + loginBean.toString());
+        Log.d("ZLOVE", "loginSuccess---" + loginBean.toString());
+        ToastUtil.showToastWithImg("登录成功", R.drawable.ic_success);
     }
 
     @Override
@@ -79,6 +135,7 @@ public class LoginFragment extends BaseFragment<UserLoginPresenter, UserLoginMod
 
     @Override
     public void showErrorTip(String msg) {
-
+        Log.d("ZLOVE", "showErrorTip---" + msg);
+        ToastUtil.showToastWithImg(msg, R.drawable.ic_wrong);
     }
 }

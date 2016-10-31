@@ -3,13 +3,16 @@ package com.zlove.channelmvp.fragment.base;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.zlove.channelmvp.R;
 import com.zlove.channelmvp.model.base.BaseModel;
 import com.zlove.channelmvp.presenter.base.BasePresenter;
 import com.zlove.channelmvp.rx.RxManager;
+import com.zlove.channelmvp.util.StatusBarCompat;
 import com.zlove.channelmvp.util.TUtil;
 
 import butterknife.ButterKnife;
@@ -45,4 +48,18 @@ public abstract class BaseFragment<P extends BasePresenter, M extends BaseModel>
     protected abstract int getLayoutResource();
     protected abstract void initPresenter();
     protected abstract void initView();
+
+    /**
+     * 着色状态栏（4.4以上系统有效）
+     */
+    protected void setStatusBarColor() {
+        StatusBarCompat.setStatusBarColor(getActivity(), ContextCompat.getColor(getActivity(), R.color.common_bg_top_bar));
+    }
+
+    /**
+     * 沉浸状态栏（4.4以上系统有效）
+     */
+    protected void setTranslateBar() {
+        StatusBarCompat.translucentStatusBar(getActivity());
+    }
 }

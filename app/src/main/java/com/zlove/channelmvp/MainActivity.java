@@ -18,4 +18,5 @@ public class MainActivity extends FragmentActivity {
             getSupportFragmentManager().beginTransaction().replace(R.id.id_framework, fragment).commit();
         }
     }
+
 }
