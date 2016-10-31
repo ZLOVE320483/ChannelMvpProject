@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="common_bg_content">#f4f4f4</color>
+    <color name="common_text_black_1">#000000</color>
+    <color name="common_text_black_2">#333333</color>
+    <color name="common_text_black_3">#666666</color>
+    <color name="common_text_black_4">#bdbdbd</color>
+    <color name="common_text_black_5">#999999</color>
+    <color name="common_text_black_6">#dfdfdf</color>
+    <color name="common_text_green">#ff9833</color>
+    <color name="common_divider">#cccccc</color>
+    <color name="common_bg_top_bar">#4dd0c8</color>
+    <color name="common_hint_color">#AEADB2</color>
+    <color name="color_index_text">#737377</color>
+    <color name="img_detail_text_unchecked_color">#78777C</color>
+    <color name="customer_state_normal_text_color">#8E8E8E</color>
+    <color name="customer_state_normal_divider_color">#efefef</color>
+
+    !-- Common Drawable -->
+    <drawable name="common_bg_back_normal">#4dd0c8</drawable>
+    <drawable name="common_bg_back_pressed">#49c5be</drawable>
+    <drawable name="common_item_normal">#ffffff</drawable>
+    <drawable name="common_item_pressed">#efefef</drawable>
+    <drawable name="number_seekbar_normal">#f4f4f4</drawable>
+    <drawable name="number_seekbar_select">#4dd0c8</drawable>
+
+    <!-- Independent Main -->
+    <color name="main_bottom_unchecked_text_color">#8e8e8e</color>
+
+    <drawable name="common_bg_content">#f4f4f4</drawable>
+    <drawable name="common_bg_top_bar">#4dd0c8</drawable>
+
+    <drawable name="img_detail_tab_unckecked_bg">#000000</drawable>
+    <color name="img_detail_tab_ckecked_bg">#363636</color>
+
+    <color name="grey"> #ebebeb</color>
+    <color name="darkgrey"> #C0C0C0</color>
+    <color name="red"> #FF0000</color>
+    <color name="darkyellow"> #FFCC33</color>
+</resources>

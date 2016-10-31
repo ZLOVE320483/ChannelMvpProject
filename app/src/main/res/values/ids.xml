@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Common -->
+    <item name="id_framework" type="id"/>
+    <item name="id_avatar" type="id"/>
+    <item name="id_back" type="id"/>
+    <item name="id_title" type="id"/>
+    <item name="id_confirm" type="id"/>
+    <item name="id_divider_1" type="id"/>
+    <item name="id_divider_2" type="id"/>
+    <item name="id_divider_3" type="id"/>
+    <item name="id_top" type="id"/>
+    <item name="id_setting" type="id"/>
+    <item name="id_photo_take" type="id"/>
+    <item name="id_photo_pic" type="id"/>
+    <item name="id_cancel" type="id"/>
+    <item name="id_search" type="id"/>
+    <item name="id_classify" type="id"/>
+    <item name="id_listview" type="id"/>
+    <item name="id_viewpager" type="id"/>
+    <item name="id_name" type="id"/>
+    <item name="id_telephone" type="id"/>
+    <item name="id_time" type="id"/>
+    <item name="id_content" type="id"/>
+    <item name="id_message" type="id"/>
+    <item name="id_edit" type="id"/>
+
+    <!-- Login -->
+    <item name="id_login" type="id"/>
+    <item name="id_account" type="id"/>
+    <item name="id_new_account" type="id"/>
+    <item name="id_account_delete" type="id"/>
+    <item name="id_new_account_delete" type="id"/>
+    <item name="id_password" type="id"/>
+    <item name="id_password_delete" type="id"/>
+    <item name="id_et_confirm_pwd" type="id"/>
+    <item name="id_et_confirm_pwd_delete" type="id"/>
+    <item name="id_register" type="id"/>
+    <item name="id_find_pwd" type="id"/>
+    <item name="id_verify_code" type="id"/>
+    <item name="id_get_verify_code" type="id"/>
+    <item name="id_user_name" type="id"/>
+
+    <!-- Main Tab -->
+    <item name="id_project" type="id"/>
+    <item name="id_todo" type="id"/>
+    <item name="id_customer" type="id"/>
+    <item name="id_friend" type="id"/>
+    <item name="id_me" type="id"/>
+    <item name="id_user_info" type="id"/>
+    <item name="id_user_commission" type="id"/>
+    <item name="id_user_bank_card" type="id"/>
+    <item name="id_cooperate_rule" type="id"/>
+    <item name="id_calculator" type="id"/>
+    <item name="id_modify_pwd" type="id"/>
+    <item name="id_modify_account" type="id"/>
+    <item name="id_check_app_version" type="id"/>
+    <item name="id_user_protocol" type="id"/>
+    <item name="id_user_feedback" type="id"/>
+    <item name="id_about" type="id"/>
+    <item name="id_gender" type="id"/>
+    <item name="id_email" type="id"/>
+    <item name="id_exit" type="id"/>
+    <item name="id_bank_card_num" type="id"/>
+    <item name="id_bank_card_user_name" type="id"/>
+    <item name="id_bank_card_name" type="id"/>
+
+    <!-- Project -->
+    <item name="id_project_img" type="id"/>
+    <item name="id_project_praise" type="id"/>
+    <item name="id_project_praise_img" type="id"/>
+    <item name="id_project_name" type="id"/>
+    <item name="id_project_price" type="id"/>
+    <item name="id_project_add_customer" type="id"/>
+    <item name="id_project_add_customer_from_list" type="id"/>
+    <item name="id_project_detail_img" type="id"/>
+    <item name="id_project_detail_sound" type="id"/>
+    <item name="id_project_detail_img_detail" type="id"/>
+    <item name="id_project_detail_img_num" type="id"/>
+    <item name="id_project_parameter" type="id"/>
+    <item name="id_project_area" type="id"/>
+    <item name="id_project_house_layout" type="id"/>
+    <item name="id_project_product" type="id"/>
+    <item name="id_project_address" type="id"/>
+    <item name="id_project_add" type="id"/>
+
+    <!-- Message -->
+    <item name="id_message_contact_customer" type="id"/>
+    <item name="id_message_contact_customer_count" type="id"/>
+    <item name="id_message_customer_progress" type="id"/>
+    <item name="id_message_customer_progress_count" type="id"/>
+    <item name="id_message_customer_trace" type="id"/>
+    <item name="id_message_customer_trace_count" type="id"/>
+    <item name="id_message_project_dynamic" type="id"/>
+    <item name="id_message_project_dynamic_count" type="id"/>
+    <item name="id_message_cooperate_rule" type="id"/>
+    <item name="id_message_cooperate_rule_count" type="id"/>
+
+    <!-- Customer -->
+    <item name="id_customer_name" type="id"/>
+    <item name="id_customer_type" type="id"/>
+    <item name="id_customer_phone" type="id"/>
+    <item name="id_customer_state" type="id"/>
+    <item name="id_customer_address" type="id"/>
+    <item name="id_customer_saleman" type="id"/>
+    <item name="id_customer_time" type="id"/>
+    <item name="id_customer_message" type="id"/>
+    <item name="id_customer_call" type="id"/>
+    <item name="id_saleman_name" type="id"/>
+    <item name="id_saleman_message" type="id"/>
+    <item name="id_saleman_phone" type="id"/>
+    <item name="id_customer_trace" type="id"/>
+
+    <!-- Friend -->
+    <item name="id_friend_name" type="id"/>
+    <item name="id_friend_phone" type="id"/>
+    <item name="id_friend_message" type="id"/>
+    <item name="id_friend_call" type="id"/>
+    <item name="id_friend_address" type="id"/>
+    <item name="id_friend_report" type="id"/>
+    <item name="id_friend_visit" type="id"/>
+
+    <!-- Customer State -->
+    <item name="id_state_report" type="id"/>
+    <item name="id_state_visit" type="id"/>
+    <item name="id_state_from" type="id"/>
+    <item name="id_state_appointment" type="id"/>
+    <item name="id_state_deal" type="id"/>
+    <item name="id_state_commission" type="id"/>
+
+    <!-- Customer Intention -->
+    <item name="id_customer_intention" type="id"/>
+    <item name="id_customer_intention_all" type="id"/>
+    <item name="id_customer_intention_a" type="id"/>
+    <item name="id_customer_intention_b" type="id"/>
+    <item name="id_customer_intention_c" type="id"/>
+    <item name="id_customer_intention_d" type="id"/>
+
+    <!-- Map Navi -->
+    <item name="id_map" type="id"/>
+    <item name="id_independent_name" type="id"/>
+
+</resources>

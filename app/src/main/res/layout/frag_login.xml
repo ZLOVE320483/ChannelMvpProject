@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/common_bg_content" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_bg_content"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_login_top_1"
+                android:contentDescription="@string/app_name" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:id="@+id/user_info_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/white"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/list_divider"
+                        android:contentDescription="@string/app_name"
+                        android:src="@color/common_divider" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/common_item_height"
+                        android:background="@color/white" >
+
+                        <AutoCompleteTextView
+                            android:id="@id/id_account"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:drawableLeft="@drawable/ic_phone"
+                            android:drawablePadding="16dp"
+                            android:hint="@string/account_hint"
+                            android:inputType="number"
+                            android:paddingLeft="@dimen/common_margin"
+                            android:paddingRight="@dimen/common_margin"
+                            android:singleLine="true"
+                            android:textColorHint="@color/common_hint_color"
+                            android:textSize="@dimen/common_hint_text_size" >
+                        </AutoCompleteTextView>
+
+                        <ImageView
+                            android:id="@id/id_account_delete"
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="@string/app_name"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_cancel"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/list_divider"
+                        android:layout_marginLeft="45dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@color/common_divider" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/common_item_height"
+                        android:background="@color/white" >
+
+                        <EditText
+                            android:id="@id/id_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:drawableLeft="@drawable/ic_password"
+                            android:drawablePadding="16dp"
+                            android:ems="10"
+                            android:hint="@string/password_hint"
+                            android:inputType="textPassword"
+                            android:paddingLeft="@dimen/common_margin"
+                            android:paddingRight="@dimen/common_margin"
+                            android:singleLine="true"
+                            android:textColorHint="@color/common_hint_color"
+                            android:textSize="@dimen/common_hint_text_size" />
+
+                        <ImageView
+                            android:id="@id/id_password_delete"
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="@string/app_name"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_cancel"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/list_divider"
+                        android:contentDescription="@string/app_name"
+                        android:src="@color/common_divider" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@id/id_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common_confirm_button_height"
+                    android:layout_below="@+id/user_info_container"
+                    android:layout_marginLeft="@dimen/common_margin"
+                    android:layout_marginRight="@dimen/common_margin"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/common_green_btn_bg"
+                    android:text="@string/login"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/confirm_button_text_size" />
+
+                <Button
+                    android:id="@id/id_find_pwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignLeft="@id/id_login"
+                    android:layout_below="@id/id_login"
+                    android:background="@android:color/transparent"
+                    android:padding="5dp"
+                    android:text="@string/find_back_pwd"
+                    android:textColor="@color/common_text_black_5"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@id/id_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignRight="@id/id_login"
+                    android:layout_below="@id/id_login"
+                    android:background="@android:color/transparent"
+                    android:padding="5dp"
+                    android:text="@string/quick_register"
+                    android:textColor="#ff9833"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_login_bottom" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
