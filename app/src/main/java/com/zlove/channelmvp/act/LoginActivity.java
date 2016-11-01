@@ -1,5 +1,6 @@
-package com.zlove.channelmvp.fragment.user;
+package com.zlove.channelmvp.act;
 
+import android.content.Intent;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -11,7 +12,6 @@ import com.rengwuxian.materialedittext.validation.RegexpValidator;
 import com.zlove.channelmvp.R;
 import com.zlove.channelmvp.bean.user.UserLoginBean;
 import com.zlove.channelmvp.contract.UserLoginContract;
-import com.zlove.channelmvp.fragment.base.BaseFragment;
 import com.zlove.channelmvp.model.user.UserLoginModel;
 import com.zlove.channelmvp.presenter.user.UserLoginPresenter;
 import com.zlove.channelmvp.util.MD5Util;
@@ -21,9 +21,9 @@ import butterknife.Bind;
 import butterknife.OnClick;
 
 /**
- * Created by ZLOVE on 2016/10/28.
+ * Created by ZLOVE on 2016/11/1.
  */
-public class LoginFragment extends BaseFragment<UserLoginPresenter, UserLoginModel> implements UserLoginContract.View, View.OnClickListener {
+public class LoginActivity extends BaseActivity<UserLoginPresenter, UserLoginModel> implements UserLoginContract.View, View.OnClickListener {
 
     @Bind(R.id.id_account)
     MaterialEditText etAccount;
@@ -34,17 +34,17 @@ public class LoginFragment extends BaseFragment<UserLoginPresenter, UserLoginMod
     private String password;
 
     @Override
-    protected int getLayoutResource() {
+    protected int getLayoutId() {
         return R.layout.act_login;
     }
 
     @Override
-    protected void initPresenter() {
+    public void initPresent() {
         mPresenter.setVM(this, mModel);
     }
 
     @Override
-    protected void initView() {
+    public void initView() {
         setTranslateBar();
 
         etAccount.addValidator(new RegexpValidator("请输入正确的手机号", "^((13[0-9])|(15[^4,\\D])|(18[0,5-9]))\\d{8}$"));
@@ -84,7 +84,6 @@ public class LoginFragment extends BaseFragment<UserLoginPresenter, UserLoginMod
                 }
             }
         });
-
     }
 
     @OnClick({R.id.id_login, R.id.id_register, R.id.id_find_pwd})
@@ -96,6 +95,8 @@ public class LoginFragment extends BaseFragment<UserLoginPresenter, UserLoginMod
                 break;
 
             case R.id.id_register:
+                Intent intent = new Intent(this, RegisterActivity.class);
+                startActivity(intent);
                 break;
 
             case R.id.id_find_pwd:
@@ -130,7 +131,6 @@ public class LoginFragment extends BaseFragment<UserLoginPresenter, UserLoginMod
 
     @Override
     public void stopLoading() {
-
     }
 
     @Override
