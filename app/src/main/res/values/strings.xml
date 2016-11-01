@@ -27,4 +27,31 @@
     <string name="password_check">请输入6&#8211;16位密码</string>
     <string name="user_real_name">请输入真实姓名</string>
     <string name="register_request">注册代表同意用户协议</string>
+
+    <!-- Common -->
+    <string name="img_desc"></string>
+    <string name="net_break_tips">您的网络已断开,请检查您的网络设置</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="submit">提交</string>
+    <string name="save">保存</string>
+    <string name="photo_take">手机拍照</string>
+    <string name="photo_pic">我的相册</string>
+    <string name="gender_man">男</string>
+    <string name="gender_woman">女</string>
+    <string name="next">下一步</string>
+    <string name="call_log">通话记录</string>
+    <string name="contact">通讯录</string>
+    <string name="name">姓名</string>
+    <string name="telephone">电话</string>
+    <string name="gender_sir">先生</string>
+    <string name="gender_lady">女士</string>
+    <string name="effective">有效</string>
+    <string name="common_no_data">暂无相关信息</string>
+    <string name="common_no_bank_tip">您还未添加任何银行卡哦</string>
+    <string name="add_bank">去添加</string>
+    <string name="project_img_detail_effect">效果图</string>
+    <string name="project_img_detail_model">样板图</string>
+    <string name="project_img_detail_layout">户型图</string>
+    <string name="function_introdution">功能介绍</string>
 </resources>

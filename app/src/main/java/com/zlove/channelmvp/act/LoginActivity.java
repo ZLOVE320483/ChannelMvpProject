@@ -100,6 +100,8 @@ public class LoginActivity extends BaseActivity<UserLoginPresenter, UserLoginMod
                 break;
 
             case R.id.id_find_pwd:
+                Intent findIntent = new Intent(this, FindPwdActivity.class);
+                startActivity(findIntent);
                 break;
 
             default:

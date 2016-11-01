@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/common_bg_content"
+              android:orientation="vertical" >
+
+    <include layout="@layout/common_view_top_bar" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_divider"
+        android:contentDescription="@string/app_name"
+        android:src="@color/common_divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:background="@android:color/white"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_divider"
+            android:contentDescription="@string/app_name"
+            android:src="@color/common_divider" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height" >
+
+            <EditText
+                android:id="@id/id_account"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/ic_account"
+                android:drawablePadding="16dp"
+                android:hint="@string/account_hint"
+                android:inputType="number"
+                android:paddingLeft="@dimen/common_margin"
+                android:paddingRight="@dimen/common_margin"
+                android:textColorHint="@color/common_hint_color"
+                android:textSize="@dimen/common_hint_text_size" />
+
+            <ImageView
+                android:id="@id/id_account_delete"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:paddingRight="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_cancel"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_divider"
+            android:layout_marginLeft="45dp"
+            android:contentDescription="@string/app_name"
+            android:src="@color/common_divider" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height" >
+
+            <EditText
+                android:id="@id/id_verify_code"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/ic_verify_code"
+                android:drawablePadding="16dp"
+                android:hint="@string/verify_code_hint"
+                android:paddingLeft="@dimen/common_margin"
+                android:paddingRight="@dimen/common_margin"
+                android:textColorHint="@color/common_hint_color"
+                android:textSize="@dimen/common_hint_text_size" />
+
+            <Button
+                android:id="@id/id_get_verify_code"
+                android:layout_width="86dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="18dp"
+                android:background="@drawable/common_round_rect_bg"
+                android:text="@string/get_verify_code"
+                android:textColor="@color/common_bg_top_bar"
+                android:textSize="@dimen/common_hint_text_size" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_divider"
+            android:contentDescription="@string/app_name"
+            android:src="@color/common_divider" />
+    </LinearLayout>
+
+    <Button
+        android:id="@id/id_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/common_green_btn_bg"
+        android:text="@string/next"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/confirm_button_text_size" />
+
+</LinearLayout>

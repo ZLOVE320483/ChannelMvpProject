@@ -28,4 +28,16 @@ public interface ApiService {
     @FormUrlEncoded
     Observable<CommonBean> userRegister(@Field("phone") String phone, @Field("password") String password, @Field("code") String code, @Field("realname") String realname);
 
+    //----Find Password----
+    @POST("user/forgetPassword")
+    @FormUrlEncoded
+    Observable<UserVerifyCodeBean> getFindPwdVerCode(@Field("phone") String phone);
+
+    @POST("user/checkPhoneCode")
+    @FormUrlEncoded
+    Observable<CommonBean> checkPhoneCode(@Field("phone") String phone, @Field("code") String code);
+
+    @POST("user/updateNewPassword")
+    @FormUrlEncoded
+    Observable<CommonBean> updateNewPassword(@Field("phone") String phone, @Field("new_password") String new_password);
 }

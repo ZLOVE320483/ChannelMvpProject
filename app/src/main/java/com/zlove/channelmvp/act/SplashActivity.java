@@ -9,7 +9,6 @@ import android.view.animation.AccelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.zlove.channelmvp.MainActivity;
 import com.zlove.channelmvp.R;
 
 import butterknife.Bind;
