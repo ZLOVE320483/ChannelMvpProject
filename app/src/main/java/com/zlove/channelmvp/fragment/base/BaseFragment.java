@@ -14,6 +14,7 @@ import com.zlove.channelmvp.presenter.base.BasePresenter;
 import com.zlove.channelmvp.rx.RxManager;
 import com.zlove.channelmvp.util.StatusBarCompat;
 import com.zlove.channelmvp.util.TUtil;
+import com.zlove.channelmvp.util.ToastUtil;
 
 import butterknife.ButterKnife;
 
@@ -62,4 +63,19 @@ public abstract class BaseFragment<P extends BasePresenter, M extends BaseModel>
     protected void setTranslateBar() {
         StatusBarCompat.translucentStatusBar(getActivity());
     }
+
+    /**
+     * 短暂显示Toast提示(来自String)
+     **/
+    public void showShortToast(String text) {
+        ToastUtil.showShort(text);
+    }
+
+    /**
+     * 短暂显示Toast提示(id)
+     **/
+    public void showShortToast(int resId) {
+        ToastUtil.showShort(resId);
+    }
+
 }

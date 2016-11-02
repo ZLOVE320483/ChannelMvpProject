@@ -19,4 +19,7 @@ public class ChannelConstant {
     public static final String KEY_USER_CURRENT_CITY_NAME = "_user_current_city_name";
     public static final String KEY_DEVICE_ID = "_device_id";
     public static final String KEY_TOKEN = "_token";
+
+    public static final String MENU_SHOW_HIDE = "_menu_show_hide";
+    public static final String HOME_CURRENT_TAB_POSITION="_home_current_tab_position";
 }

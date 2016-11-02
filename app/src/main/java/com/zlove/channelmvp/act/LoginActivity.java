@@ -11,6 +11,7 @@ import com.rengwuxian.materialedittext.MaterialEditText;
 import com.rengwuxian.materialedittext.validation.RegexpValidator;
 import com.zlove.channelmvp.R;
 import com.zlove.channelmvp.bean.user.UserLoginBean;
+import com.zlove.channelmvp.config.ChannelCookie;
 import com.zlove.channelmvp.contract.UserLoginContract;
 import com.zlove.channelmvp.model.user.UserLoginModel;
 import com.zlove.channelmvp.presenter.user.UserLoginPresenter;
@@ -125,6 +126,27 @@ public class LoginActivity extends BaseActivity<UserLoginPresenter, UserLoginMod
     public void loginSuccess(UserLoginBean loginBean) {
         Log.d("ZLOVE", "loginSuccess---" + loginBean.toString());
         ToastUtil.showToastWithImg("登录成功", R.drawable.ic_success);
+        ChannelCookie.getInstance().setLoginPass(true);
+        UserLoginBean.UserLoginData data = loginBean.getData();
+        if (data != null) {
+            String sessionId = data.getSession_id();
+            ChannelCookie.getInstance().saveUserInfo(account, password, sessionId);
+            String gender = data.getGender();
+            if (gender.equals("1")) {
+                ChannelCookie.getInstance().saveUserGender("男");
+            } else if (gender.equals("2")) {
+                ChannelCookie.getInstance().saveUserGender("女");
+            } else {
+                ChannelCookie.getInstance().saveUserGender("");
+            }
+            String userAvatar = data.getAvatar();
+            ChannelCookie.getInstance().saveUserAvatar(userAvatar);
+            String realName = data.getRealname();
+            ChannelCookie.getInstance().saveUserName(realName);
+        }
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 
     @Override

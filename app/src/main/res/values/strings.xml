@@ -53,5 +53,38 @@
     <string name="project_img_detail_effect">效果图</string>
     <string name="project_img_detail_model">样板图</string>
     <string name="project_img_detail_layout">户型图</string>
-    <string name="function_introdution">功能介绍</string>
+    <string name="function_introduction">功能介绍</string>
+
+    <!-- Independent Main -->
+    <string name="main_bottom_tab_customer">客户</string>
+    <string name="main_bottom_tab_project">楼盘</string>
+    <string name="main_bottom_tab_todo">消息</string>
+    <string name="main_bottom_tab_friend">好友</string>
+    <string name="main_bottom_tab_me">我</string>
+    <string name="user_info">个人设置</string>
+    <string name="user_commission">我的佣金</string>
+    <string name="commission">个人佣金</string>
+    <string name="user_modify_pwd">修改密码</string>
+    <string name="user_modify_account">修改绑定账号</string>
+    <string name="user_check_version">检查更新</string>
+    <string name="app_about">关于我们</string>
+    <string name="user_exit">退出登录</string>
+    <string name="user_avatar">头像</string>
+    <string name="user_name">真实姓名</string>
+    <string name="user_gender">性别</string>
+    <string name="user_email">邮箱</string>
+    <string name="user_phone">电话</string>
+    <string name="user_protocol">用户协议</string>
+    <string name="user_feedback">用户反馈</string>
+    <string name="user_bank_card">银行卡</string>
+    <string name="user_cooperate_rule">合作规则</string>
+    <string name="user_calculator">房贷计算器</string>
+    <string name="user_feedback_hint">请输入您对产品的意见和建议</string>
+    <string name="add_bank_card_tip">请输入您的银行卡信息</string>
+    <string name="bank_card_num">银行卡号:</string>
+    <string name="bank_card_user_name">开户人:</string>
+    <string name="bank_card_name">开户行:</string>
+    <string name="no_settle_commission">未结佣金(元)</string>
+    <string name="total_commission">总计佣金(元)</string>
+    <string name="app_message">站内消息</string>
 </resources>

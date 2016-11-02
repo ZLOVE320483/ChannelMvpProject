@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.zlove.channelmvp.R;
+import com.zlove.channelmvp.config.ChannelCookie;
 
 import butterknife.Bind;
 
@@ -53,7 +54,12 @@ public class SplashActivity extends BaseActivity {
 
             @Override
             public void onAnimationEnd(Animator animator) {
-                Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
+                Intent intent = new Intent();
+                if (ChannelCookie.getInstance().isLoginPass()) {
+                    intent.setClass(SplashActivity.this, MainActivity.class);
+                } else {
+                    intent.setClass(SplashActivity.this, LoginActivity.class);
+                }
                 startActivity(intent);
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 finish();

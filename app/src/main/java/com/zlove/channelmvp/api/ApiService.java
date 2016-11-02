@@ -1,6 +1,7 @@
 package com.zlove.channelmvp.api;
 
 import com.zlove.channelmvp.bean.CommonBean;
+import com.zlove.channelmvp.bean.project.ProjectItemBean;
 import com.zlove.channelmvp.bean.user.UserLoginBean;
 import com.zlove.channelmvp.bean.user.UserVerifyCodeBean;
 
@@ -40,4 +41,13 @@ public interface ApiService {
     @POST("user/updateNewPassword")
     @FormUrlEncoded
     Observable<CommonBean> updateNewPassword(@Field("phone") String phone, @Field("new_password") String new_password);
+
+    @POST("house/getHouseList")
+    @FormUrlEncoded
+    Observable<ProjectItemBean> getProjectList(@Field("keyword") String keyword, @Field("city_id") String city_id,
+                                               @Field("house_type") String house_type, @Field("property_type") String property_type,
+                                               @Field("price_min") String price_min, @Field("price_max") String price_max,
+                                               @Field("page_index") String page_index, @Field("page_size") String page_size,
+                                               @Field("area_id") String area_id);
+
 }

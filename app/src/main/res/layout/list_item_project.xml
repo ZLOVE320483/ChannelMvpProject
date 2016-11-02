@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:baselineAligned="false"
+              android:orientation="vertical">
+
+    <ImageView
+        android:id="@id/id_project_img"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:contentDescription="@string/img_desc"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_image_download"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="5dp"
+        android:paddingLeft="@dimen/common_margin"
+        android:paddingRight="@dimen/common_margin"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@id/id_project_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:ellipsize="end"
+            android:maxLength="10"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_text_size_4"/>
+
+        <TextView
+            android:id="@id/id_project_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:ellipsize="end"
+            android:maxEms="10"
+            android:singleLine="true"
+            android:textColor="@color/common_text_black_4"
+            android:textSize="@dimen/common_text_size_4"/>
+
+        <TextView
+            android:id="@+id/commission_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/id_project_name"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/common_green_txt_bg"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:singleLine="true"
+            android:text="@string/commission"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_text_size_4"/>
+
+        <TextView
+            android:id="@+id/commission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_project_name"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/commission_tag"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/common_bg_top_bar"
+            android:textSize="@dimen/common_text_size_4"/>
+    </RelativeLayout>
+
+</LinearLayout>

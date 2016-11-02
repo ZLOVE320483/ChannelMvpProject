@@ -3,6 +3,8 @@ package com.zlove.channelmvp.app;
 import android.app.Application;
 import android.util.Log;
 
+import com.zlove.channelmvp.config.ChannelCookie;
+
 /**
  * Created by ZLOVE on 2016/10/28.
  */
@@ -16,6 +18,7 @@ public class ChannelMvpApplication extends Application {
     public void onCreate() {
         super.onCreate();
         instance = this;
+        ChannelCookie.getInstance().initCookie(this);
     }
 
     public static ChannelMvpApplication getInstance() {

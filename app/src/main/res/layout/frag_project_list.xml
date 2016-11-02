@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@id/id_top"
+            layout="@layout/common_main_tab_top_bar"/>
+
+        <com.zlove.pulltorefreshrecyclerview.IRecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/id_top"
+            app:loadMoreEnabled="true"
+            app:refreshEnabled="true"
+            app:refreshHeaderLayout="@layout/layout_irecyclerview_refresh_header">
+        </com.zlove.pulltorefreshrecyclerview.IRecyclerView>
+
+        <com.zlove.channelmvp.widget.LoadingTip
+            android:id="@+id/loading_tip"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_centerInParent="true">
+        </com.zlove.channelmvp.widget.LoadingTip>
+
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:src="@drawable/ic_arrow_upward"
+        app:backgroundTint="@color/common_bg_top_bar"
+        app:layout_behavior="com.zlove.channelmvp.widget.ScrollAwareFABBehavior"/>
+</android.support.design.widget.CoordinatorLayout>
