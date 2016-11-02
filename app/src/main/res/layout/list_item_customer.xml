@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/common_margin"
+    android:paddingRight="@dimen/common_margin" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp" >
+
+        <TextView
+            android:id="@id/id_customer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/common_text_black_2"
+            android:singleLine="true"
+            android:maxEms="6"
+            android:ellipsize="end"
+            android:textSize="@dimen/common_text_size_2" />
+
+        <ImageView
+            android:id="@id/id_customer_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/id_customer_name"
+            android:layout_marginLeft="5dp"
+            android:contentDescription="@string/img_desc" />
+
+        <TextView
+            android:id="@id/id_customer_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/id_customer_type"
+            android:textColor="@color/common_text_black_2"
+            android:textSize="@dimen/common_text_size_4" />
+
+        <TextView
+            android:id="@id/id_customer_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/common_round_rect_bg"
+            android:paddingBottom="2dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="2dp"
+            android:textColor="@color/common_bg_top_bar"
+            android:textSize="@dimen/common_text_size_4" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp" >
+        <TextView
+            android:id="@+id/id_project_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/common_text_black_5"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:maxEms="8"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/common_text_size_4" />
+
+        <TextView
+            android:id="@id/id_project_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/id_project_area"
+            android:layout_marginLeft="8dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/id_project_area"
+            android:textColor="@color/common_text_black_5"
+            android:textSize="@dimen/common_text_size_4" />
+
+        <TextView
+            android:id="@+id/project_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/id_project_area"
+            android:layout_marginLeft="8dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_centerVertical="true"
+            android:maxEms="8"
+            android:layout_toRightOf="@id/id_project_price"
+            android:textColor="@color/common_text_black_5"
+            android:textSize="@dimen/common_text_size_4" />
+
+        <TextView
+            android:id="@+id/project_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/id_project_area"
+            android:layout_marginLeft="8dp"
+            android:singleLine="true"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:maxEms="8"
+            android:layout_toRightOf="@id/project_layout"
+            android:textColor="@color/common_text_black_5"
+            android:textSize="@dimen/common_text_size_4" />
+
+        <ImageView
+            android:id="@+id/has_over_due"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/project_type"
+            android:visibility="gone"
+            android:src="@drawable/has_over_due"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="18dp" >
+
+        <TextView
+            android:id="@+id/id_project_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/common_text_black_5"
+            android:textSize="@dimen/common_text_size_4" />
+
+        <TextView
+            android:id="@id/id_customer_saleman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/id_project_name"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/id_project_name"
+            android:textColor="@color/common_text_black_5"
+            android:textSize="@dimen/common_text_size_4" />
+
+        <TextView
+            android:id="@id/id_customer_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/id_project_name"
+			android:layout_toRightOf="@id/id_customer_saleman"
+			android:layout_marginLeft="10dp"
+            android:textColor="@color/common_text_black_5"
+            android:textSize="@dimen/common_text_size_4" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+</LinearLayout>

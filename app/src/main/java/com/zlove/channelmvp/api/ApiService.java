@@ -1,6 +1,7 @@
 package com.zlove.channelmvp.api;
 
 import com.zlove.channelmvp.bean.CommonBean;
+import com.zlove.channelmvp.bean.customer.CustomerListBean;
 import com.zlove.channelmvp.bean.message.MessageHomeBean;
 import com.zlove.channelmvp.bean.project.ProjectItemBean;
 import com.zlove.channelmvp.bean.user.UserLoginBean;
@@ -53,5 +54,12 @@ public interface ApiService {
 
     @POST("message/getHomeList")
     Observable<MessageHomeBean> getMessageHomeUnReadCount();
+
+    @POST("client/getClientList")
+    @FormUrlEncoded
+    Observable<CustomerListBean> getCustomerList(@Field("keyword") String keyword, @Field("category_id") String category_id,
+                                                 @Field("house_type") String house_type, @Field("property_type") String property_type,
+                                                 @Field("page_index") String page_index, @Field("page_size") String page_size,
+                                                 @Field("status") String status, @Field("is_disabled") String is_disabled);
 
 }
