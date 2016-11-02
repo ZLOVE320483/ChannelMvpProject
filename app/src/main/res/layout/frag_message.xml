@@ -4,4 +4,316 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
+    <include layout="@layout/common_main_tab_top_bar" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_divider"
+        android:contentDescription="@string/img_desc"
+        android:src="@color/common_divider" />
+
+    <RelativeLayout
+        android:id="@id/id_message_contact_customer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/common_item_bg"
+        android:paddingLeft="@dimen/common_margin"
+        android:paddingRight="@dimen/common_margin" >
+
+        <RelativeLayout
+            android:id="@+id/contact_customer_icon_container"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" >
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/img_desc"
+                android:src="@drawable/ic_contact_customer" />
+
+            <TextView
+                android:id="@id/id_message_contact_customer_count"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="3dp"
+                android:visibility="gone"
+                android:background="@drawable/tv_unread_count_bg"
+                android:gravity="center"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/contact_customer_icon_container"
+            android:text="@string/message_contact_customer"
+            android:textColor="@color/common_text_black_2"
+            android:textSize="@dimen/common_text_size_2" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/img_desc"
+            android:src="@drawable/ic_arrow_right" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_divider"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:contentDescription="@string/img_desc"
+        android:src="@color/common_divider" />
+
+    <RelativeLayout
+        android:id="@id/id_message_customer_progress"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/common_item_bg"
+        android:paddingLeft="@dimen/common_margin"
+        android:paddingRight="@dimen/common_margin" >
+
+        <RelativeLayout
+            android:id="@+id/customer_progress_icon_container"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" >
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/img_desc"
+                android:src="@drawable/ic_customer_progress" />
+
+            <TextView
+                android:id="@id/id_message_customer_progress_count"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/tv_unread_count_bg"
+                android:visibility="gone"
+                android:gravity="center"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/customer_progress_icon_container"
+            android:text="@string/message_customer_progress"
+            android:textColor="@color/common_text_black_2"
+            android:textSize="@dimen/common_text_size_2" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/img_desc"
+            android:src="@drawable/ic_arrow_right" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_divider"
+        android:contentDescription="@string/img_desc"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:src="@color/common_divider" />
+
+    <RelativeLayout
+        android:id="@id/id_message_customer_trace"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/common_item_bg"
+        android:paddingLeft="@dimen/common_margin"
+        android:paddingRight="@dimen/common_margin" >
+
+        <RelativeLayout
+            android:id="@+id/customer_trace_icon_container"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" >
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/img_desc"
+                android:src="@drawable/ic_customer_trace" />
+
+            <TextView
+                android:id="@id/id_message_customer_trace_count"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/tv_unread_count_bg"
+                android:gravity="center"
+                android:visibility="gone"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/customer_trace_icon_container"
+            android:text="@string/message_customer_trace"
+            android:textColor="@color/common_text_black_2"
+            android:textSize="@dimen/common_text_size_2" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/img_desc"
+            android:src="@drawable/ic_arrow_right" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_divider"
+        android:contentDescription="@string/img_desc"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:src="@color/common_divider" />
+
+    <RelativeLayout
+        android:id="@id/id_message_project_dynamic"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/common_item_bg"
+        android:paddingLeft="@dimen/common_margin"
+        android:paddingRight="@dimen/common_margin" >
+
+        <RelativeLayout
+            android:id="@+id/project_dynamic_icon_container"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" >
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/img_desc"
+                android:src="@drawable/ic_project_dynamic" />
+
+            <TextView
+                android:id="@id/id_message_project_dynamic_count"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/tv_unread_count_bg"
+                android:gravity="center"
+                android:visibility="gone"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/project_dynamic_icon_container"
+            android:text="@string/message_project_dynamic"
+            android:textColor="@color/common_text_black_2"
+            android:textSize="@dimen/common_text_size_2" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/img_desc"
+            android:src="@drawable/ic_arrow_right" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_divider"
+        android:contentDescription="@string/img_desc"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:src="@color/common_divider" />
+
+    <RelativeLayout
+        android:id="@id/id_message_cooperate_rule"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/common_item_bg"
+        android:paddingLeft="@dimen/common_margin"
+        android:paddingRight="@dimen/common_margin" >
+
+        <RelativeLayout
+            android:id="@+id/cooperate_rule_icon_container"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" >
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/img_desc"
+                android:src="@drawable/ic_cooperate_rule" />
+
+            <TextView
+                android:id="@id/id_message_cooperate_rule_count"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/tv_unread_count_bg"
+                android:gravity="center"
+                android:visibility="gone"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/cooperate_rule_icon_container"
+            android:text="@string/message_cooperate_rule"
+            android:textColor="@color/common_text_black_2"
+            android:textSize="@dimen/common_text_size_2" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/img_desc"
+            android:src="@drawable/ic_arrow_right" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_divider"
+        android:contentDescription="@string/img_desc"
+        android:src="@color/common_divider" />
+
 </LinearLayout>

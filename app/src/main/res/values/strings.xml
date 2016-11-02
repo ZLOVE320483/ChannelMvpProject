@@ -87,4 +87,11 @@
     <string name="no_settle_commission">未结佣金(元)</string>
     <string name="total_commission">总计佣金(元)</string>
     <string name="app_message">站内消息</string>
+
+    <!-- Message -->
+    <string name="message_contact_customer">联系客户</string>
+    <string name="message_customer_progress">客户进度</string>
+    <string name="message_customer_trace">客户追踪</string>
+    <string name="message_project_dynamic">楼盘动态</string>
+    <string name="message_cooperate_rule">合作规则</string>
 </resources>

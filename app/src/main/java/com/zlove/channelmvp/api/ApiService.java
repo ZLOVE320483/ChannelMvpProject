@@ -1,6 +1,7 @@
 package com.zlove.channelmvp.api;
 
 import com.zlove.channelmvp.bean.CommonBean;
+import com.zlove.channelmvp.bean.message.MessageHomeBean;
 import com.zlove.channelmvp.bean.project.ProjectItemBean;
 import com.zlove.channelmvp.bean.user.UserLoginBean;
 import com.zlove.channelmvp.bean.user.UserVerifyCodeBean;
@@ -49,5 +50,8 @@ public interface ApiService {
                                                @Field("price_min") String price_min, @Field("price_max") String price_max,
                                                @Field("page_index") String page_index, @Field("page_size") String page_size,
                                                @Field("area_id") String area_id);
+
+    @POST("message/getHomeList")
+    Observable<MessageHomeBean> getMessageHomeUnReadCount();
 
 }
