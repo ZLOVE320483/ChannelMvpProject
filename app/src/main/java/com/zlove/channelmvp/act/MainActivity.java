@@ -137,6 +137,7 @@ public class MainActivity extends BaseActivity {
                 transaction.hide(customerListFragment);
                 transaction.hide(friendListFragment);
                 transaction.show(meFragment);
+                transaction.commitAllowingStateLoss();
                 break;
             default:
                 break;

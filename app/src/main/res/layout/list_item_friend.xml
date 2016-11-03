@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp" >
+
+        <TextView
+            android:id="@id/id_friend_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/common_text_black_2"
+            android:textSize="@dimen/confirm_button_text_size" />
+
+        <TextView
+            android:id="@id/id_friend_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/id_friend_name"
+            android:layout_toRightOf="@id/id_friend_name"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/common_text_black_3"
+            android:textSize="@dimen/common_text_size_3" />
+
+        <ImageView
+            android:id="@id/id_friend_message"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@id/id_friend_call"
+            android:contentDescription="@string/img_desc"
+            android:src="@drawable/friend_message" />
+
+        <ImageView
+            android:id="@id/id_friend_call"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/img_desc"
+            android:src="@drawable/friend_call" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp" >
+
+        <TextView
+            android:id="@id/id_friend_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/common_text_green"
+            android:textSize="@dimen/common_text_size_4" />
+
+        <TextView
+            android:id="@+id/tv_state_report"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/id_friend_address"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/id_friend_address"
+            android:text="@string/customer_status_report"
+            android:textColor="@color/common_text_black_4"
+            android:visibility="gone"
+            android:textSize="@dimen/common_text_size_4" />
+
+        <TextView
+            android:id="@id/id_friend_report"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/id_friend_address"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/tv_state_report"
+            android:visibility="gone"
+            android:textColor="@color/common_text_black_4"
+            android:textSize="@dimen/common_text_size_4" />
+
+        <TextView
+            android:id="@+id/tv_state_visit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/id_friend_address"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/id_friend_report"
+            android:visibility="gone"
+            android:text="@string/customer_status_visit"
+            android:textColor="@color/common_text_black_4"
+            android:textSize="@dimen/common_text_size_4" />
+
+        <TextView
+            android:id="@id/id_friend_visit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/id_friend_address"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:visibility="gone"
+            android:layout_toRightOf="@+id/tv_state_visit"
+            android:textColor="@color/common_text_black_4"
+            android:textSize="@dimen/common_text_size_4" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+</LinearLayout>
